@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  ## --------------------------------------------
+  ## | Nginx Push Stream Module
+  ## --------------------------------------------
+  push-server:
+    build:
+      context: ./.docker-compose/
+      dockerfile: Dockerfile
+    image: pushserver
+    ports:
+     - "9080:9080"
+
